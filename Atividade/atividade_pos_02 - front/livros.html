@@ -7,20 +7,32 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
-        :root {
-            --primary-light: #53e6e3;
-            --primary: #0CABA8;
-            --primary-dark: #008F8C;
-            --secondary: #015958;
-            --secondary-dark: #023535;
-            --text: #2d3748;
-            --text-light: #4a5568;
-            --white: #ffffff;
-            --gray-light: #e1e4e7;
-            --gray: #e2e8f0;
-            --success: #38a169;
-            --danger: #e53e3e;
-        }
+       
+    :root {
+        --primary-light: #8E1ED9;
+        --primary: #6B12A6;
+        --primary-dark: #590D8C;
+        --secondary: #180326;
+        --secondary-dark: #380759;
+        /* Mantive as cores de texto e status originais para contraste */
+        --text: #2d3748;
+        --text-light: #4a5568;
+        --white: #ffffff;
+        --gray-light: #e1e4e7;
+        --gray: #e2e8f0;
+        --success: #38a169;
+        --danger: #e53e3e;
+    }
+
+    /* Ajustes pontuais nos elementos que usavam cores hardcoded */
+    .p1, .p2, .p3, .p4 {
+        margin-left: 15%;
+        color: var(--secondary-dark); /* Antes #023535 */
+    }
+
+    .table tr:hover {
+        background-color: rgba(107, 18, 166, 0.05); /* RGB do --primary */
+    }
         
         * {
             padding: 0;
@@ -262,13 +274,6 @@
             align-items: center;
         }
         
-       
-        .p1, .p2, .p3, .p4{
-            margin-left: 15%;
-            color: #023535;
-         
-        }
-       
         
         /* Responsive */
         @media (max-width: 768px) {
